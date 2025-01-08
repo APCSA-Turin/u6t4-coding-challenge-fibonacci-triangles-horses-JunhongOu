@@ -8,15 +8,25 @@ public class Point {
       this.x = x;
       this.y = y;
     }
+
+    public int getX(){
+    return x;
+    }
+
+    public int getY(){
+      return y;
+    }
     
     // Returns distance between this Point object and another Point object
     public double distanceTo(Point other) {
-      /* IMPLEMENT ME */
+     int disX = x - other.x;
+     int disY = y - other.y;
+     return Math.sqrt(disX * disX + disY * disY);
     }
   
     // Returns a string in the format: (x, y)
     public String pointInfo() {
-      /* IMPLEMENT ME */
+      return "("+x+", "+y+")";
     }
   }
   
